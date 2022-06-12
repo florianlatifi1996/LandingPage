@@ -10,37 +10,51 @@
 <body>
     <!--Navbar-->
       
-      <nav class="relative container mx-auto p-6">
-          <div class="flex items-start justify-betwen">
-              <div class="pt-2 h-9 w-9">
-                  <img src="assets/download.png" alt="logo">
-                  </div>
-                  <!--menu items-->
-                  <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                    <li class="mr-3">
-                      <a class="inline-block py-2 px-4 text-black font-bold no-underline text-lg"  href="#">Fetosoft</a>
-                    </li>
-                    <li class="mr-3">
-                      <a class="inline-block text-black no-underline hover:text-red-800 hover:text-underline py-2 px-4" href="#">Services</a>
-                    </li>
-                    <li class="mr-3">
-                      <a class="inline-block text-black no-underline hover:text-red-800 hover:text-underline py-2 px-4" href="#">Portfolio</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-black no-underline hover:text-red-800 hover:text-underline py-2 px-4" href="#">Blog</a>
-                      </li>
-                      <li class="mr-3">
-                        <a class="inline-block text-black no-underline hover:text-red-800 hover:text-underline py-2 px-4" href="#">Contact</a>
-                      </li>
-                  </ul>
-
-                  <button id="navAction" class="mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-red-600 text-gray-800">
-                    Action
-                  </button>
-                  </div>
+    <nav class="sticky sticky-props top-0 bg-white lg:bg-transparent border-b px-4 py-4" data-controller="toggle">
+      <div class="container mx-auto flex items-center justify-between flex-wrap">
+        <div class="flex items-center flex-shrink-0 mr-6 ml-6">
+          <a href="/assets/download.png">
+          
+    
+          <span class="sr-only">fetosoft</span>
+    </a>      <div class="block lg:hidden">
+          <a class="text-3xl
+                                                     text-primary-200
+                                                     ml-4" href="/">fetosoft</a>
           </div>
-          <hr class="border-b border-x-gray-500 opacity-25 my-0 py-0">
-      </nav>
+        </div>
+    
+        <div class="block lg:hidden">
+          <button type="button" id="sidebar-open" class="flex px-6 items-center lg:hidden text-primary-200 focus:outline-none" data-action="click->toggle#toggle touch->toggle#toggle">
+            <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+          </button>
+        </div>
+    
+    
+        <div class="w-full block flex-grow hidden lg:flex lg:items-center lg:w-auto" data-target="toggle.toggleable">
+          <div class="text-md text-center p-2 lg:p-0 lg:text-left lg:flex-grow ">
+            <a class="nav-link
+                                               text-2xl
+                                               text-primary-200
+                                               lg:text-white
+                                               -ml-4
+                                               invisible lg:visible" href="/">fetosoft</a>
+      <a class=" border-b-2 border-gray-600 lg:border-b-0 nav-link text-primary-200 lg:text-white" href="#services">Services</a>
+      <a class=" border-b-2 border-gray-600 lg:border-b-0 nav-link text-primary-200 lg:text-white" href="#portfolio">Portfolio</a>
+      <a class=" border-b-2 border-gray-600 lg:border-b-0 nav-link text-primary-200 lg:text-white" href="/blog">Blog</a>
+      <a class=" border-b-2 border-gray-600 lg:border-b-0 nav-link text-primary-200 lg:text-white" href="#contact">Contact</a>
+    
+          </div>
+    
+          <div class="text-md text-center p-2 lg:p-0 lg:text-right">
+            
+    <a class="btn btn-primary rounded-full bg-primary-600" href="/quotes/new">Get Quote</a>
+    
+    
+          </div>
+        </div>
+      </div>
+    </nav>
       <!--Hero section-->
 
       <div class=" mt-20 h-screen py-32 m-auto text-center flex flex-col items-center justify-center bg-fixed bg-cover bg-darken-75">
@@ -54,62 +68,70 @@
       </div>
       <hr class="border-b border-x-gray-500 opacity-25 my-0 py-0">
       <!--Digital Agency section-->
-      <div class="flex flex-wrap pt-12">
-        
-        <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
-          <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
-            <img src="assets/care about you success.jpg">
-            <div class="flex justify-center">
-              <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
-                <i class="far fa-thumbs-up fa-2x text-primary-500" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="py-2 px-2">
-              <div class=" font-bold font-title text-center">Care about your success</div>
-              <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">We can do anything, but we dont necessarily do everything. We aren’t focused on making the sale; we will happily suggest someone who can help you if the project isn’t a mutual fit.</div>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
-          <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
-           <img src="assets/digital agency/an extension.jpg">
-            <div class="flex justify-center">
-              <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
-                <i class="fas fa-puzzle-piece fa-2x text-primary-500" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="py-2 px-2">
-              <div class=" font-bold font-title text-center">An Extension of Your Team</div>
-              <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">We are more than a web development company located in Kumanovo, North Macedonia. We are the talent, diversity and dedication you need, without the payroll. We can function as an extension of your team in all services we offer - temporarly, by hour or even we can build a dedicated team for you. </div>
-            </div>
-          </div>
-        </div>
-       
-        <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
-          <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
-            <img src="assets/digital agency/111.jpg">
-            <div class="flex justify-center">
-              <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
-                <i class="fas fa-traffic-light fa-2x text-primary-500" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="py-2 px-2">
-              <div class=" font-bold font-title text-center">Never Fail</div>
-              <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">Success is not optional. We have seen it all, done it all, and put proven processes in place to prevent fires before they start. We will always find a way to get the job done. </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="border-b border-x-gray-500 opacity-25 my-0 py-0">
-
-      <section id="services" class="py-24 pl-4 pr-4 bg-primary-200 bg-slate-800">
-        <h1 class="m-2 text-black font-bold  text-center">Services</h1>
-        <p class="mb-6 text-black  text-center leading-normal text-2xl">We hand-craft digital experiences that build brands and grow businesses. Together, we can create awesome web applications to solve huge business problems.</p>
+      <section id="digital_agency" class="py-24 pl-4 pr-4">
+        <h1 class="m-2 text-primary-200  text-center">What make us different kind of digital agency ?</h1>
+        <p class="mb-6 text-primary-200  text-center leading-normal text-2xl">Satisfaction guranteed - You pay only if we meet your expectations - prior agreed.</p>
         <div class="flex flex-wrap pt-12">
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <!-- Care about your success  -->
+          <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
+            <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
+              <img src="assets/care about you success.jpg">
+              <div class="flex justify-center">
+                <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
+                  <i class="far fa-thumbs-up fa-2x text-primary-500" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="py-2 px-2">
+                <div class=" font-bold font-title text-center">Care about your success</div>
+                <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">We can do anything, but we don’t necessarily do everything. We aren’t focused on making the sale; we will happily suggest someone who can help you if the project isn’t a mutual fit.</div>
+              </div>
+            </div>
+          </div>
+          <!-- Care about your success END -->
+          <!-- An Extension of Your Team  -->
+          <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
+            <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
+              <img src="assets/digital agency/an extension.jpg">
+              <div class="flex justify-center">
+                <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
+                  <i class="fas fa-puzzle-piece fa-2x text-primary-500" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="py-2 px-2">
+                <div class=" font-bold font-title text-center">An Extension of Your Team</div>
+                <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">We are more than a web development company located in Kumanovo, North Macedonia. We are the talent, diversity and dedication you need, without the payroll. We can function as an extension of your team in all services we offer - temporarly, by hour or even we can build a dedicated team for you. </div>
+              </div>
+            </div>
+          </div>
+          <!-- An Extension of Your Team END -->
+          <!-- Never Fail  -->
+          <div class="md:w-1/2 lg:w-1/3 py-2 lg:px-4 ">
+            <div class="bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
+              <img src="assets/digital agency/111.jpg">
+              <div class="flex justify-center">
+                <div class="rounded-full -mt-6 border-4 border-white pt-2 text-center object-cover bg-gray-200 mr-2 h-16 w-16">
+                  <i class="fas fa-traffic-light fa-2x text-primary-500" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="py-2 px-2">
+                <div class=" font-bold font-title text-center">Never Fail</div>
+                <div class="text-sm font-light text-justify my-2" style="min-height: 110px;">Success is not optional. We have seen it all, done it all, and put proven processes in place to prevent fires before they start. We will always find a way to get the job done. </div>
+              </div>
+            </div>
+          </div>
+          <!-- Never Fail END -->
+        </div>
+      </section>   
+      <hr class="border-b border-x-gray-500 opacity-25 my-0 py-0">
+            
+      <section id="services" class="py-24 pl-4 pr-4 bg-primary-200">
+        <h1 class="m-2 text-white  text-center">Services</h1>
+        <p class="mb-6 text-white  text-center leading-normal text-2xl">We hand-craft digital experiences that build brands and grow businesses. Together, we can create awesome web applications to solve huge business problems.</p>
+        <div class="flex flex-wrap pt-12">
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="h-64 bg-white relative shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" role="img" aria-labelledby="ae68v3riks57dq1ba03tu9ap5whr7a60" class="fill-current icon-xxl text-primary-600 inline-block"><title id="ae68v3riks57dq1ba03tu9ap5whr7a60">Icons/web development</title><path d="m467 1h-422c-24.813 0-45 20.187-45 45v420c0 24.813 20.187 45 45 45h422c24.813 0 45-20.187 45-45v-420c0-24.813-20.187-45-45-45zm-422 30h422c8.271 0 15 6.729 15 15v75h-452v-75c0-8.271 6.729-15 15-15zm422 450h-422c-8.271 0-15-6.729-15-15v-315h452v315c0 8.271-6.729 15-15 15z"></path><path d="m306.909 197.213c-7.614-3.263-16.433.264-19.696 7.878l-90 210c-3.264 7.614.264 16.433 7.878 19.696 7.617 3.264 16.434-.266 19.696-7.878l90-210c3.264-7.615-.264-16.433-7.878-19.696z"></path><path d="m177.713 246.629c-5.176-6.469-14.617-7.517-21.083-2.342l-75 60c-7.499 5.997-7.504 17.424 0 23.426l75 60c6.469 5.176 15.91 4.126 21.083-2.342 5.175-6.469 4.127-15.909-2.343-21.083l-60.358-48.288 60.358-48.287c6.47-5.175 7.518-14.614 2.343-21.084z"></path><path d="m430.37 304.287-75-60c-6.469-5.176-15.909-4.127-21.083 2.342-5.175 6.469-4.127 15.909 2.343 21.083l60.358 48.288-60.358 48.287c-6.47 5.175-7.518 14.614-2.343 21.083 5.182 6.476 14.623 7.512 21.083 2.342l75-60c7.499-5.997 7.504-17.423 0-23.425z"></path><circle cx="76" cy="76" r="15"></circle><circle cx="136" cy="76" r="15"></circle><circle cx="196" cy="76" r="15"></circle><path d="m346 91h90c8.284 0 15-6.716 15-15s-6.716-15-15-15h-90c-8.284 0-15 6.716-15 15s6.716 15 15 15z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" role="img" aria-labelledby="ait9y5kstl5yup3hgvx5mg6222qi3h4d" class="fill-current icon-xxl text-primary-600 inline-block"><title id="ait9y5kstl5yup3hgvx5mg6222qi3h4d">Icons/web development</title><path d="m467 1h-422c-24.813 0-45 20.187-45 45v420c0 24.813 20.187 45 45 45h422c24.813 0 45-20.187 45-45v-420c0-24.813-20.187-45-45-45zm-422 30h422c8.271 0 15 6.729 15 15v75h-452v-75c0-8.271 6.729-15 15-15zm422 450h-422c-8.271 0-15-6.729-15-15v-315h452v315c0 8.271-6.729 15-15 15z"></path><path d="m306.909 197.213c-7.614-3.263-16.433.264-19.696 7.878l-90 210c-3.264 7.614.264 16.433 7.878 19.696 7.617 3.264 16.434-.266 19.696-7.878l90-210c3.264-7.615-.264-16.433-7.878-19.696z"></path><path d="m177.713 246.629c-5.176-6.469-14.617-7.517-21.083-2.342l-75 60c-7.499 5.997-7.504 17.424 0 23.426l75 60c6.469 5.176 15.91 4.126 21.083-2.342 5.175-6.469 4.127-15.909-2.343-21.083l-60.358-48.288 60.358-48.287c6.47-5.175 7.518-14.614 2.343-21.084z"></path><path d="m430.37 304.287-75-60c-6.469-5.176-15.909-4.127-21.083 2.342-5.175 6.469-4.127 15.909 2.343 21.083l60.358 48.288-60.358 48.287c-6.47 5.175-7.518 14.614-2.343 21.083 5.182 6.476 14.623 7.512 21.083 2.342l75-60c7.499-5.997 7.504-17.423 0-23.425z"></path><circle cx="76" cy="76" r="15"></circle><circle cx="136" cy="76" r="15"></circle><circle cx="196" cy="76" r="15"></circle><path d="m346 91h90c8.284 0 15-6.716 15-15s-6.716-15-15-15h-90c-8.284 0-15 6.716-15 15s6.716 15 15 15z"></path></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -119,10 +141,10 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="bg-white h-64 shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512.002 512.002" height="512" viewBox="0 0 512.002 512.002" width="512" role="img" aria-labelledby="a5meiicejqr5ep7l1sks2yhkq509g0em" class="fill-current icon-xxl text-primary-600 inline-block"><title id="a5meiicejqr5ep7l1sks2yhkq509g0em">Icons/web design</title><g><path d="m484.098 168.413h-28.693v-96.97c0-22.228-18.084-40.311-40.312-40.311h-347.337c-22.228 0-40.311 18.083-40.311 40.311v246.11c0 9.259 3.264 17.963 8.747 24.897h-23.213c-7.157-.001-12.979 5.846-12.979 13.031v19.028c0 18.29 14.769 33.169 32.922 33.169h186.003c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-186.003c-9.882 0-17.922-8.15-17.922-18.169v-17.06h315.961v35.229h-77.036c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h77.036v45.288c0 15.387 12.518 27.905 27.904 27.905h125.232c15.387 0 27.904-12.518 27.904-27.905 0-11.462 0-248.448 0-256.648.001-15.387-12.517-27.905-27.903-27.905zm-153.137 174.036h-267.741c-11.882-2.179-20.774-12.784-20.774-24.897v-246.109c0-13.957 11.354-25.311 25.311-25.311h347.337c13.957 0 25.312 11.354 25.312 25.311v96.971h-14.477c0-10.489 0-83.129 0-94.64 0-7.381-6.005-13.387-13.386-13.387-2.043 0-331.807 0-342.234 0-7.382 0-13.387 6.005-13.387 13.387v241.08c0 7.381 6.005 13.387 13.387 13.387h260.653v14.208zm79.967-267.063v19.913h-300.74v-19.913zm-315.74 0v19.913h-23.267v-19.913zm235.773 120.931v116.923h-259.04v-202.941h339.007v58.114h-52.062c-15.387 0-27.905 12.518-27.905 27.904zm15 29.445h15.081v15.018h-15.081zm151.041 227.204c0 7.116-5.789 12.905-12.904 12.905h-125.233c-7.115 0-12.904-5.789-12.904-12.905v-21.495h151.041zm0-36.495h-151.041c0-61.225 0-99.53 0-160.691h151.041zm0-175.691h-120.96v-15.018h120.96zm0-30.018c-7.655 0-144.215 0-151.041 0v-14.445c0-7.115 5.789-12.904 12.904-12.904h125.232c7.115 0 12.904 5.789 12.904 12.904v14.445z"></path><path d="m413.51 454.593h15.943c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-15.943c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5z"></path><path d="m266.171 199.078-32.184-21.945c-10.185-6.946-24.017.362-24.017 12.691v43.891c0 12.326 13.827 19.638 24.017 12.691l32.184-21.945c8.936-6.093 8.934-19.292 0-25.383zm-8.451 12.99-32.184 21.946c-.097.065-.18.123-.373.021-.192-.102-.192-.203-.192-.32v-43.891c0-.117 0-.218.192-.32.076-.04.135-.056.185-.056.076 0 .13.037.188.077l32.184 21.945c.067.046.158.108.158.299 0 .192-.091.254-.158.299z"></path><path d="m236.425 141.552c-38.718 0-70.218 31.5-70.218 70.217s31.5 70.217 70.218 70.217 70.217-31.499 70.217-70.217-31.499-70.217-70.217-70.217zm0 125.435c-30.447 0-55.218-24.77-55.218-55.217s24.771-55.217 55.218-55.217c30.446 0 55.217 24.771 55.217 55.217s-24.771 55.217-55.217 55.217z"></path><path d="m419.907 304.176c-9.527-6.496-22.422.367-22.422 11.85v38.2c0 11.577 12.974 18.292 22.423 11.849l28.01-19.1c8.344-5.688 8.342-18.011.001-23.699zm-7.422 48.805v-35.711l26.186 17.856z"></path><path d="m421.481 397.211c26.099 0 49.576-16.494 58.42-41.043 1.404-3.897-.616-8.194-4.514-9.598-3.896-1.402-8.194.617-9.598 4.514-6.708 18.618-24.515 31.127-44.309 31.127-25.963 0-47.085-21.123-47.085-47.085s21.122-47.085 47.085-47.085c20.626 0 38.666 13.202 44.892 32.851 1.25 3.949 5.468 6.136 9.414 4.885 3.949-1.251 6.136-5.466 4.885-9.415-8.208-25.911-31.995-43.32-59.19-43.32-34.233 0-62.085 27.852-62.085 62.085s27.852 62.084 62.085 62.084z"></path></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512.002 512.002" height="512" viewBox="0 0 512.002 512.002" width="512" role="img" aria-labelledby="afladw8ucst4ooqiv5brrsv4xz19pawg" class="fill-current icon-xxl text-primary-600 inline-block"><title id="afladw8ucst4ooqiv5brrsv4xz19pawg">Icons/web design</title><g><path d="m484.098 168.413h-28.693v-96.97c0-22.228-18.084-40.311-40.312-40.311h-347.337c-22.228 0-40.311 18.083-40.311 40.311v246.11c0 9.259 3.264 17.963 8.747 24.897h-23.213c-7.157-.001-12.979 5.846-12.979 13.031v19.028c0 18.29 14.769 33.169 32.922 33.169h186.003c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-186.003c-9.882 0-17.922-8.15-17.922-18.169v-17.06h315.961v35.229h-77.036c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h77.036v45.288c0 15.387 12.518 27.905 27.904 27.905h125.232c15.387 0 27.904-12.518 27.904-27.905 0-11.462 0-248.448 0-256.648.001-15.387-12.517-27.905-27.903-27.905zm-153.137 174.036h-267.741c-11.882-2.179-20.774-12.784-20.774-24.897v-246.109c0-13.957 11.354-25.311 25.311-25.311h347.337c13.957 0 25.312 11.354 25.312 25.311v96.971h-14.477c0-10.489 0-83.129 0-94.64 0-7.381-6.005-13.387-13.386-13.387-2.043 0-331.807 0-342.234 0-7.382 0-13.387 6.005-13.387 13.387v241.08c0 7.381 6.005 13.387 13.387 13.387h260.653v14.208zm79.967-267.063v19.913h-300.74v-19.913zm-315.74 0v19.913h-23.267v-19.913zm235.773 120.931v116.923h-259.04v-202.941h339.007v58.114h-52.062c-15.387 0-27.905 12.518-27.905 27.904zm15 29.445h15.081v15.018h-15.081zm151.041 227.204c0 7.116-5.789 12.905-12.904 12.905h-125.233c-7.115 0-12.904-5.789-12.904-12.905v-21.495h151.041zm0-36.495h-151.041c0-61.225 0-99.53 0-160.691h151.041zm0-175.691h-120.96v-15.018h120.96zm0-30.018c-7.655 0-144.215 0-151.041 0v-14.445c0-7.115 5.789-12.904 12.904-12.904h125.232c7.115 0 12.904 5.789 12.904 12.904v14.445z"></path><path d="m413.51 454.593h15.943c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-15.943c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5z"></path><path d="m266.171 199.078-32.184-21.945c-10.185-6.946-24.017.362-24.017 12.691v43.891c0 12.326 13.827 19.638 24.017 12.691l32.184-21.945c8.936-6.093 8.934-19.292 0-25.383zm-8.451 12.99-32.184 21.946c-.097.065-.18.123-.373.021-.192-.102-.192-.203-.192-.32v-43.891c0-.117 0-.218.192-.32.076-.04.135-.056.185-.056.076 0 .13.037.188.077l32.184 21.945c.067.046.158.108.158.299 0 .192-.091.254-.158.299z"></path><path d="m236.425 141.552c-38.718 0-70.218 31.5-70.218 70.217s31.5 70.217 70.218 70.217 70.217-31.499 70.217-70.217-31.499-70.217-70.217-70.217zm0 125.435c-30.447 0-55.218-24.77-55.218-55.217s24.771-55.217 55.218-55.217c30.446 0 55.217 24.771 55.217 55.217s-24.771 55.217-55.217 55.217z"></path><path d="m419.907 304.176c-9.527-6.496-22.422.367-22.422 11.85v38.2c0 11.577 12.974 18.292 22.423 11.849l28.01-19.1c8.344-5.688 8.342-18.011.001-23.699zm-7.422 48.805v-35.711l26.186 17.856z"></path><path d="m421.481 397.211c26.099 0 49.576-16.494 58.42-41.043 1.404-3.897-.616-8.194-4.514-9.598-3.896-1.402-8.194.617-9.598 4.514-6.708 18.618-24.515 31.127-44.309 31.127-25.963 0-47.085-21.123-47.085-47.085s21.122-47.085 47.085-47.085c20.626 0 38.666 13.202 44.892 32.851 1.25 3.949 5.468 6.136 9.414 4.885 3.949-1.251 6.136-5.466 4.885-9.415-8.208-25.911-31.995-43.32-59.19-43.32-34.233 0-62.085 27.852-62.085 62.085s27.852 62.084 62.085 62.084z"></path></g></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -132,10 +154,10 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="bg-white h-64 shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="ance4vt7w5gj3ut9nuv2ap1m84hi557q" class="fill-current icon-xxl text-primary-600 inline-block"><title id="ance4vt7w5gj3ut9nuv2ap1m84hi557q">Icons/branding</title><g id="Bag"><path d="M480,136H400V80A72.081,72.081,0,0,0,328,8H312a71.778,71.778,0,0,0-52,22.279A71.778,71.778,0,0,0,208,8H192a72.081,72.081,0,0,0-72,72v56H32a8,8,0,0,0-8,8V496a8,8,0,0,0,8,8H480a8,8,0,0,0,8-8V144A8,8,0,0,0,480,136ZM424,376a8,8,0,0,0,8-8V152h40V474.708l-41.979-47.976a8,8,0,0,0-12.042,0L376,474.708V152h40V368A8,8,0,0,0,424,376Zm38.37,112H385.63L424,444.149ZM312,24h16a56.063,56.063,0,0,1,56,56v56H280V80a71.544,71.544,0,0,0-10.151-36.807A55.869,55.869,0,0,1,312,24ZM260,59.255A55.677,55.677,0,0,1,264,80v56h-8V80A55.677,55.677,0,0,1,260,59.255ZM136,80a56.063,56.063,0,0,1,56-56h16a55.869,55.869,0,0,1,42.151,19.193A71.544,71.544,0,0,0,240,80v56H136ZM40,488V152h80v24a8,8,0,0,0,16,0V152H264v24a8,8,0,0,0,16,0V152h80V488Z"></path><path d="M120,360H288a8,8,0,0,0,6.86-12.116l-48-80a8,8,0,0,0-13.72,0L224,283.12l-29.14-48.566a8,8,0,0,0-13.72,0l-68,113.33A8,8,0,0,0,120,360Zm120-72.45L273.87,344H260.53l-27.2-45.332Zm-52-33.331L241.87,344H134.13Z"></path><path d="M276,200a28,28,0,1,0,28,28A28.032,28.032,0,0,0,276,200Zm0,40a12,12,0,1,1,12-12A12.013,12.013,0,0,1,276,240Z"></path><path d="M296,376H120a8,8,0,0,0,0,16H296a8,8,0,0,0,0-16Z"></path><path d="M264,400H120a8,8,0,0,0,0,16H264a8,8,0,0,0,0-16Z"></path><path d="M296,400h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"></path><path d="M416,400a8,8,0,0,0,16,0v-8a8,8,0,0,0-16,0Z"></path></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="aoqxs176fqpw46j7d1qy58vahn7sqih3" class="fill-current icon-xxl text-primary-600 inline-block"><title id="aoqxs176fqpw46j7d1qy58vahn7sqih3">Icons/branding</title><g id="Bag"><path d="M480,136H400V80A72.081,72.081,0,0,0,328,8H312a71.778,71.778,0,0,0-52,22.279A71.778,71.778,0,0,0,208,8H192a72.081,72.081,0,0,0-72,72v56H32a8,8,0,0,0-8,8V496a8,8,0,0,0,8,8H480a8,8,0,0,0,8-8V144A8,8,0,0,0,480,136ZM424,376a8,8,0,0,0,8-8V152h40V474.708l-41.979-47.976a8,8,0,0,0-12.042,0L376,474.708V152h40V368A8,8,0,0,0,424,376Zm38.37,112H385.63L424,444.149ZM312,24h16a56.063,56.063,0,0,1,56,56v56H280V80a71.544,71.544,0,0,0-10.151-36.807A55.869,55.869,0,0,1,312,24ZM260,59.255A55.677,55.677,0,0,1,264,80v56h-8V80A55.677,55.677,0,0,1,260,59.255ZM136,80a56.063,56.063,0,0,1,56-56h16a55.869,55.869,0,0,1,42.151,19.193A71.544,71.544,0,0,0,240,80v56H136ZM40,488V152h80v24a8,8,0,0,0,16,0V152H264v24a8,8,0,0,0,16,0V152h80V488Z"></path><path d="M120,360H288a8,8,0,0,0,6.86-12.116l-48-80a8,8,0,0,0-13.72,0L224,283.12l-29.14-48.566a8,8,0,0,0-13.72,0l-68,113.33A8,8,0,0,0,120,360Zm120-72.45L273.87,344H260.53l-27.2-45.332Zm-52-33.331L241.87,344H134.13Z"></path><path d="M276,200a28,28,0,1,0,28,28A28.032,28.032,0,0,0,276,200Zm0,40a12,12,0,1,1,12-12A12.013,12.013,0,0,1,276,240Z"></path><path d="M296,376H120a8,8,0,0,0,0,16H296a8,8,0,0,0,0-16Z"></path><path d="M264,400H120a8,8,0,0,0,0,16H264a8,8,0,0,0,0-16Z"></path><path d="M296,400h-8a8,8,0,0,0,0,16h8a8,8,0,0,0,0-16Z"></path><path d="M416,400a8,8,0,0,0,16,0v-8a8,8,0,0,0-16,0Z"></path></g></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -145,10 +167,10 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="bg-white h-64 shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128" role="img" aria-labelledby="agosej941sfeib9lngrb8e3mdhvro3vo" class="fill-current icon-xxl text-primary-600 inline-block"><title id="agosej941sfeib9lngrb8e3mdhvro3vo">Icons/promotion</title><g><path d="M99.125,40.1H96.75V17.934A6.758,6.758,0,0,0,90,11.184H84.991c-.024,0-.048.006-.072.007a1.7,1.7,0,0,0-.344.05,1.152,1.152,0,0,0-.114.035,1.771,1.771,0,0,0-.3.127c-.021.012-.045.016-.065.029A133.282,133.282,0,0,1,15.563,30.41H11.75A11.764,11.764,0,0,0,0,42.16V59.451A11.763,11.763,0,0,0,11.75,71.2H14.5L7.821,110.093a5.75,5.75,0,0,0,5.666,6.723h9.135a5.737,5.737,0,0,0,5.667-4.776l2.1-12.2h3.6a5.735,5.735,0,0,0,5.667-4.777l1.659-9.652A5.748,5.748,0,0,0,35.64,78.69H34.018l1.037-6.037A133.232,133.232,0,0,1,84.016,90.131l.041.023.043.025.012,0a1.745,1.745,0,0,0,.411.176l.023.007a1.748,1.748,0,0,0,.454.067h5a6.758,6.758,0,0,0,6.75-6.75V61.521h2.375a7.759,7.759,0,0,0,7.75-7.75V47.847A7.759,7.759,0,0,0,99.125,40.1ZM3.5,59.451V42.16a8.259,8.259,0,0,1,8.25-8.25h3.813A136.768,136.768,0,0,0,83.25,15.983V85.628A136.759,136.759,0,0,0,33.961,68.955c-.015,0-.029-.01-.044-.013s-.051,0-.076,0A136.656,136.656,0,0,0,15.563,67.7H11.75A8.259,8.259,0,0,1,3.5,59.451ZM35.64,82.19a2.249,2.249,0,0,1,2.217,2.63L36.2,94.472a2.244,2.244,0,0,1-2.218,1.869h-3L32.8,85.76l.613-3.57Zm-10.8,29.257a2.246,2.246,0,0,1-2.218,1.869H13.487a2.25,2.25,0,0,1-2.217-2.631l6.776-39.442a133.354,133.354,0,0,1,13.538.944ZM93.25,83.684A3.254,3.254,0,0,1,90,86.934H86.75V14.684H90a3.254,3.254,0,0,1,3.25,3.25v65.75Zm10.125-29.913a4.255,4.255,0,0,1-4.25,4.25H96.75V43.6h2.375a4.254,4.254,0,0,1,4.25,4.25Z"></path><path d="M46.245,66.58a1.75,1.75,0,0,0,2.13-1.708V36.738a1.75,1.75,0,0,0-2.13-1.708,141.484,141.484,0,0,1-30.682,3.38H11.75A3.755,3.755,0,0,0,8,42.16V59.451a3.755,3.755,0,0,0,3.75,3.75h3.813A141.5,141.5,0,0,1,46.245,66.58ZM11.5,59.451V42.16a.253.253,0,0,1,.25-.25h3.813A144.948,144.948,0,0,0,44.875,38.9v23.8A144.962,144.962,0,0,0,15.563,59.7H11.75A.253.253,0,0,1,11.5,59.451Z"></path><path d="M126.25,49.059h-9.875a1.75,1.75,0,0,0,0,3.5h9.875a1.75,1.75,0,0,0,0-3.5Z"></path><path d="M111.6,41.023a1.742,1.742,0,0,0,1.237-.512l6.982-6.983a1.749,1.749,0,1,0-2.474-2.474l-6.983,6.982a1.75,1.75,0,0,0,1.238,2.987Z"></path><path d="M112.835,61.105a1.75,1.75,0,0,0-2.475,2.475l6.983,6.984a1.75,1.75,0,1,0,2.474-2.475Z"></path></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128" role="img" aria-labelledby="a33a5kcq4lmmkob2jbdae5gs8c8ee594" class="fill-current icon-xxl text-primary-600 inline-block"><title id="a33a5kcq4lmmkob2jbdae5gs8c8ee594">Icons/promotion</title><g><path d="M99.125,40.1H96.75V17.934A6.758,6.758,0,0,0,90,11.184H84.991c-.024,0-.048.006-.072.007a1.7,1.7,0,0,0-.344.05,1.152,1.152,0,0,0-.114.035,1.771,1.771,0,0,0-.3.127c-.021.012-.045.016-.065.029A133.282,133.282,0,0,1,15.563,30.41H11.75A11.764,11.764,0,0,0,0,42.16V59.451A11.763,11.763,0,0,0,11.75,71.2H14.5L7.821,110.093a5.75,5.75,0,0,0,5.666,6.723h9.135a5.737,5.737,0,0,0,5.667-4.776l2.1-12.2h3.6a5.735,5.735,0,0,0,5.667-4.777l1.659-9.652A5.748,5.748,0,0,0,35.64,78.69H34.018l1.037-6.037A133.232,133.232,0,0,1,84.016,90.131l.041.023.043.025.012,0a1.745,1.745,0,0,0,.411.176l.023.007a1.748,1.748,0,0,0,.454.067h5a6.758,6.758,0,0,0,6.75-6.75V61.521h2.375a7.759,7.759,0,0,0,7.75-7.75V47.847A7.759,7.759,0,0,0,99.125,40.1ZM3.5,59.451V42.16a8.259,8.259,0,0,1,8.25-8.25h3.813A136.768,136.768,0,0,0,83.25,15.983V85.628A136.759,136.759,0,0,0,33.961,68.955c-.015,0-.029-.01-.044-.013s-.051,0-.076,0A136.656,136.656,0,0,0,15.563,67.7H11.75A8.259,8.259,0,0,1,3.5,59.451ZM35.64,82.19a2.249,2.249,0,0,1,2.217,2.63L36.2,94.472a2.244,2.244,0,0,1-2.218,1.869h-3L32.8,85.76l.613-3.57Zm-10.8,29.257a2.246,2.246,0,0,1-2.218,1.869H13.487a2.25,2.25,0,0,1-2.217-2.631l6.776-39.442a133.354,133.354,0,0,1,13.538.944ZM93.25,83.684A3.254,3.254,0,0,1,90,86.934H86.75V14.684H90a3.254,3.254,0,0,1,3.25,3.25v65.75Zm10.125-29.913a4.255,4.255,0,0,1-4.25,4.25H96.75V43.6h2.375a4.254,4.254,0,0,1,4.25,4.25Z"></path><path d="M46.245,66.58a1.75,1.75,0,0,0,2.13-1.708V36.738a1.75,1.75,0,0,0-2.13-1.708,141.484,141.484,0,0,1-30.682,3.38H11.75A3.755,3.755,0,0,0,8,42.16V59.451a3.755,3.755,0,0,0,3.75,3.75h3.813A141.5,141.5,0,0,1,46.245,66.58ZM11.5,59.451V42.16a.253.253,0,0,1,.25-.25h3.813A144.948,144.948,0,0,0,44.875,38.9v23.8A144.962,144.962,0,0,0,15.563,59.7H11.75A.253.253,0,0,1,11.5,59.451Z"></path><path d="M126.25,49.059h-9.875a1.75,1.75,0,0,0,0,3.5h9.875a1.75,1.75,0,0,0,0-3.5Z"></path><path d="M111.6,41.023a1.742,1.742,0,0,0,1.237-.512l6.982-6.983a1.749,1.749,0,1,0-2.474-2.474l-6.983,6.982a1.75,1.75,0,0,0,1.238,2.987Z"></path><path d="M112.835,61.105a1.75,1.75,0,0,0-2.475,2.475l6.983,6.984a1.75,1.75,0,1,0,2.474-2.475Z"></path></g></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -158,10 +180,10 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="bg-white h-64 shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_5" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" role="img" aria-labelledby="aq7ptjxrcgzvuczulk6yrugqcldc214w" class="fill-current icon-xxl text-primary-600 inline-block"><title id="aq7ptjxrcgzvuczulk6yrugqcldc214w">Icons/outsourcing</title><g><path d="m50 33h-8v-12h-18v8h-8v16h-12.193l.776 1.468c5.393 10.197 15.898 16.532 27.417 16.532s22.024-6.335 27.417-16.532l.776-1.468h-10.193zm-2 12h-10v-10h10zm-16 16c-1.874 0-3.766-2.237-5.325-6h10.65c-1.559 3.763-3.451 6-5.325 6zm7.49-6h10.168c-3.861 2.968-8.439 4.934-13.343 5.667 1.177-1.349 2.248-3.257 3.175-5.667zm-11.804 5.667c-4.904-.734-9.482-2.7-13.343-5.667h10.167c.927 2.41 1.998 4.318 3.176 5.667zm-1.759-7.667c-.598-1.771-1.127-3.786-1.563-6h5.636 6 3.635c-.436 2.214-.964 4.229-1.563 6zm.073-30h14v10h-4v12h-6v-16h-4zm-8 8h10v14h-10zm-10.818 16h8.818 6.329c.417 2.201.913 4.211 1.481 6h-11.807c-1.842-1.757-3.47-3.764-4.821-6zm49.636 0c-1.351 2.236-2.98 4.243-4.822 6h-11.807c.568-1.789 1.064-3.799 1.481-6h8.33z"></path><path d="m12 23c6.065 0 11-4.935 11-11s-4.935-11-11-11-11 4.935-11 11 4.935 11 11 11zm-5.632-3.991c.837-2.381 3.065-4.009 5.632-4.009s4.795 1.628 5.632 4.009c-1.544 1.243-3.501 1.991-5.632 1.991s-4.088-.748-5.632-1.991zm2.632-9.009c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3zm3-7c4.962 0 9 4.037 9 9 0 2.045-.694 3.927-1.847 5.44-.822-1.661-2.184-2.97-3.841-3.723 1.027-.916 1.688-2.235 1.688-3.717 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 1.482.661 2.801 1.688 3.717-1.657.753-3.019 2.062-3.841 3.723-1.153-1.513-1.847-3.395-1.847-5.44 0-4.963 4.038-9 9-9z"></path><path d="m52 23c6.065 0 11-4.935 11-11s-4.935-11-11-11-11 4.935-11 11 4.935 11 11 11zm-5.632-3.991c.837-2.381 3.065-4.009 5.632-4.009s4.795 1.628 5.632 4.009c-1.544 1.243-3.501 1.991-5.632 1.991s-4.088-.748-5.632-1.991zm2.632-9.009c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3zm3-7c4.962 0 9 4.037 9 9 0 2.045-.694 3.927-1.847 5.44-.822-1.661-2.184-2.97-3.841-3.723 1.027-.916 1.688-2.235 1.688-3.717 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 1.482.661 2.801 1.688 3.717-1.657.753-3.019 2.062-3.841 3.723-1.153-1.513-1.847-3.395-1.847-5.44 0-4.963 4.038-9 9-9z"></path><path d="m31 6.414v8.586h2v-8.586l3.293 3.293 1.414-1.414-5.707-5.707-5.707 5.707 1.414 1.414z"></path><path d="m31 17h2v2h-2z"></path><path d="m54.293 25.707 3.293 3.293h-9.586v2h9.586l-3.293 3.293 1.414 1.414 5.707-5.707-5.707-5.707z"></path><path d="m9.707 34.293-3.293-3.293h7.586v-2h-7.586l3.293-3.293-1.414-1.414-5.707 5.707 5.707 5.707z"></path><path d="m32 29h2v2h-2z"></path><path d="m32 37h2v2h-2z"></path><path d="m32 41h2v2h-2z"></path><path d="m32 33h2v2h-2z"></path><path d="m32 25h2v2h-2z"></path><path d="m36 29h2v2h-2z"></path><path d="m36 25h2v2h-2z"></path><path d="m28 25h2v2h-2z"></path><path d="m24 33h2v2h-2z"></path><path d="m20 33h2v2h-2z"></path><path d="m20 37h2v2h-2z"></path><path d="m24 37h2v2h-2z"></path><path d="m20 41h2v2h-2z"></path><path d="m24 41h2v2h-2z"></path><path d="m44 37h2v2h-2z"></path><path d="m40 37h2v2h-2z"></path><path d="m40 41h2v2h-2z"></path><path d="m44 41h2v2h-2z"></path></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_5" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" role="img" aria-labelledby="alvu37nruvnkdh4zzmh38qqbnuedjse7" class="fill-current icon-xxl text-primary-600 inline-block"><title id="alvu37nruvnkdh4zzmh38qqbnuedjse7">Icons/outsourcing</title><g><path d="m50 33h-8v-12h-18v8h-8v16h-12.193l.776 1.468c5.393 10.197 15.898 16.532 27.417 16.532s22.024-6.335 27.417-16.532l.776-1.468h-10.193zm-2 12h-10v-10h10zm-16 16c-1.874 0-3.766-2.237-5.325-6h10.65c-1.559 3.763-3.451 6-5.325 6zm7.49-6h10.168c-3.861 2.968-8.439 4.934-13.343 5.667 1.177-1.349 2.248-3.257 3.175-5.667zm-11.804 5.667c-4.904-.734-9.482-2.7-13.343-5.667h10.167c.927 2.41 1.998 4.318 3.176 5.667zm-1.759-7.667c-.598-1.771-1.127-3.786-1.563-6h5.636 6 3.635c-.436 2.214-.964 4.229-1.563 6zm.073-30h14v10h-4v12h-6v-16h-4zm-8 8h10v14h-10zm-10.818 16h8.818 6.329c.417 2.201.913 4.211 1.481 6h-11.807c-1.842-1.757-3.47-3.764-4.821-6zm49.636 0c-1.351 2.236-2.98 4.243-4.822 6h-11.807c.568-1.789 1.064-3.799 1.481-6h8.33z"></path><path d="m12 23c6.065 0 11-4.935 11-11s-4.935-11-11-11-11 4.935-11 11 4.935 11 11 11zm-5.632-3.991c.837-2.381 3.065-4.009 5.632-4.009s4.795 1.628 5.632 4.009c-1.544 1.243-3.501 1.991-5.632 1.991s-4.088-.748-5.632-1.991zm2.632-9.009c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3zm3-7c4.962 0 9 4.037 9 9 0 2.045-.694 3.927-1.847 5.44-.822-1.661-2.184-2.97-3.841-3.723 1.027-.916 1.688-2.235 1.688-3.717 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 1.482.661 2.801 1.688 3.717-1.657.753-3.019 2.062-3.841 3.723-1.153-1.513-1.847-3.395-1.847-5.44 0-4.963 4.038-9 9-9z"></path><path d="m52 23c6.065 0 11-4.935 11-11s-4.935-11-11-11-11 4.935-11 11 4.935 11 11 11zm-5.632-3.991c.837-2.381 3.065-4.009 5.632-4.009s4.795 1.628 5.632 4.009c-1.544 1.243-3.501 1.991-5.632 1.991s-4.088-.748-5.632-1.991zm2.632-9.009c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3zm3-7c4.962 0 9 4.037 9 9 0 2.045-.694 3.927-1.847 5.44-.822-1.661-2.184-2.97-3.841-3.723 1.027-.916 1.688-2.235 1.688-3.717 0-2.757-2.243-5-5-5s-5 2.243-5 5c0 1.482.661 2.801 1.688 3.717-1.657.753-3.019 2.062-3.841 3.723-1.153-1.513-1.847-3.395-1.847-5.44 0-4.963 4.038-9 9-9z"></path><path d="m31 6.414v8.586h2v-8.586l3.293 3.293 1.414-1.414-5.707-5.707-5.707 5.707 1.414 1.414z"></path><path d="m31 17h2v2h-2z"></path><path d="m54.293 25.707 3.293 3.293h-9.586v2h9.586l-3.293 3.293 1.414 1.414 5.707-5.707-5.707-5.707z"></path><path d="m9.707 34.293-3.293-3.293h7.586v-2h-7.586l3.293-3.293-1.414-1.414-5.707 5.707 5.707 5.707z"></path><path d="m32 29h2v2h-2z"></path><path d="m32 37h2v2h-2z"></path><path d="m32 41h2v2h-2z"></path><path d="m32 33h2v2h-2z"></path><path d="m32 25h2v2h-2z"></path><path d="m36 29h2v2h-2z"></path><path d="m36 25h2v2h-2z"></path><path d="m28 25h2v2h-2z"></path><path d="m24 33h2v2h-2z"></path><path d="m20 33h2v2h-2z"></path><path d="m20 37h2v2h-2z"></path><path d="m24 37h2v2h-2z"></path><path d="m20 41h2v2h-2z"></path><path d="m24 41h2v2h-2z"></path><path d="m44 37h2v2h-2z"></path><path d="m40 37h2v2h-2z"></path><path d="m40 41h2v2h-2z"></path><path d="m44 41h2v2h-2z"></path></g></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -171,10 +193,10 @@
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 " >
+          <div class="w-full md:w-1/6 lg:w-1/6 py-2 lg:px-4 ">
             <div class="bg-white h-64 shadow p-2 rounded-lg text-gray-800 hover:shadow-lg">
               <div class="text-center my-8">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512" role="img" aria-labelledby="aqbntnu6mc6p7i1cb3ojoklfqngdgxuc" class="fill-current icon-xxl text-primary-600 inline-block"><title id="aqbntnu6mc6p7i1cb3ojoklfqngdgxuc">Icons/consulting</title><g id="Consult-Talk"><rect x="16" y="25" width="2" height="2"></rect><rect x="26" y="25" width="2" height="2"></rect><path d="M61.142,36.01l-3.907-.558a14,14,0,0,0-.657-1.6L58.942,30.7a1,1,0,0,0-.093-1.307l-4.243-4.243A.989.989,0,0,0,54,24.867V15.241A8,8,0,0,0,57,9a7.917,7.917,0,0,0-4.573-7.224A1,1,0,0,0,51,2.68v5.6l-2,.667-2-.667V2.68a1,1,0,0,0-1.427-.9A7.917,7.917,0,0,0,41,9a8,8,0,0,0,3,6.241V22H41a1,1,0,0,0-.99.858l-.647,4.529,1.98.283L41.867,24h4.266l.524,3.67a1,1,0,0,0,.71.818,11.939,11.939,0,0,1,2.4.987,1,1,0,0,0,1.081-.077l2.961-2.22,3.016,3.016L54.6,33.155a1,1,0,0,0-.077,1.081,11.939,11.939,0,0,1,.987,2.4,1,1,0,0,0,.818.71l3.67.524v4.266l-3.67.524a1,1,0,0,0-.818.71,11.939,11.939,0,0,1-.987,2.4,1,1,0,0,0,.077,1.081l2.22,2.961-3.016,3.016L50.845,50.6a1,1,0,0,0-1.081-.077,11.939,11.939,0,0,1-2.4.987,1,1,0,0,0-.71.818L46.133,56H42V51.771a11.1,11.1,0,0,0-.45-3.121,9.11,9.11,0,1,0-6.394-7.062c-.024-.01-.047-.022-.071-.031L27,38.323V36.786A11.089,11.089,0,0,0,30.479,34H33a3,3,0,0,0,3-3V28.816A3,3,0,0,0,38,26V23a3,3,0,0,0-2-2.816V19A14,14,0,0,0,8,19v1.184A3,3,0,0,0,6,23v3a3,3,0,0,0,3,3h2c.064,0,.126-.01.189-.014A11.023,11.023,0,0,0,17,36.786v1.537L8.915,41.557A10.949,10.949,0,0,0,2,51.771V61a1,1,0,0,0,1,1H41a1,1,0,0,0,1-1V58h5a1,1,0,0,0,.99-.858l.558-3.907a14,14,0,0,0,1.6-.657L53.3,54.942a1,1,0,0,0,1.307-.093l4.243-4.243a1,1,0,0,0,.093-1.307l-2.364-3.152a14,14,0,0,0,.657-1.6l3.907-.558A1,1,0,0,0,62,43V37A1,1,0,0,0,61.142,36.01Zm-11-8.588c-.047-.023-.1-.038-.147-.06V15H48v7.93l-.01-.072A1,1,0,0,0,47,22H46V14.74a1,1,0,0,0-.429-.821A6,6,0,0,1,45,4.522V9a1,1,0,0,0,.684.949l3,1a1,1,0,0,0,.632,0l3-1A1,1,0,0,0,53,9V4.522a6,6,0,0,1-.571,9.4A1,1,0,0,0,52,14.74V26.033ZM37,40a7.05,7.05,0,1,1,3.333,5.941,10.916,10.916,0,0,0-2.611-2.877A6.836,6.836,0,0,1,37,40Zm-4-8H31.786a10.9,10.9,0,0,0,1.025-3.014c.063,0,.125.014.189.014h1v2A1,1,0,0,1,33,32ZM31,21a3.015,3.015,0,0,1-2.4-1.2l-1.8-2.4a1,1,0,0,0-.674-.392,1.011,1.011,0,0,0-.751.211L22.019,19.9A5.018,5.018,0,0,1,18.9,21H13V20a9,9,0,0,1,18,0Zm5,5a1,1,0,0,1-1,1H33V22h2a1,1,0,0,1,1,1ZM22,7A12.013,12.013,0,0,1,34,19v1H33a11,11,0,0,0-22,0H10V19A12.013,12.013,0,0,1,22,7ZM9,27a1,1,0,0,1-1-1V23a1,1,0,0,1,1-1h2v5Zm4,0V23h5.9a7.024,7.024,0,0,0,4.372-1.534l2.551-2.041L27,21a5.025,5.025,0,0,0,4,2v4a8.947,8.947,0,0,1-1.522,5H22v2h5.644A8.991,8.991,0,0,1,13,27Zm9,11a10.966,10.966,0,0,0,3-.426V39a3,3,0,0,1-6,0V37.574A10.966,10.966,0,0,0,22,38ZM40,60H34V49H32V60H12V49H10V60H4V51.771a8.958,8.958,0,0,1,5.658-8.357l7.563-3.025a4.968,4.968,0,0,0,9.558,0l7.563,3.025A8.958,8.958,0,0,1,40,51.771Z"></path><rect x="43" y="26" width="2" height="2"></rect><rect x="43" y="52" width="2" height="2"></rect><rect x="52.192" y="48.192" width="2" height="2" transform="translate(-19.205 52.021) rotate(-45)"></rect><rect x="56" y="39" width="2" height="2"></rect><rect x="52.192" y="29.808" width="2" height="2" transform="translate(-6.205 46.636) rotate(-45)"></rect></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512" role="img" aria-labelledby="a9gthamt1jufoc36ik0xpx09q32s5xt8" class="fill-current icon-xxl text-primary-600 inline-block"><title id="a9gthamt1jufoc36ik0xpx09q32s5xt8">Icons/consulting</title><g id="Consult-Talk"><rect x="16" y="25" width="2" height="2"></rect><rect x="26" y="25" width="2" height="2"></rect><path d="M61.142,36.01l-3.907-.558a14,14,0,0,0-.657-1.6L58.942,30.7a1,1,0,0,0-.093-1.307l-4.243-4.243A.989.989,0,0,0,54,24.867V15.241A8,8,0,0,0,57,9a7.917,7.917,0,0,0-4.573-7.224A1,1,0,0,0,51,2.68v5.6l-2,.667-2-.667V2.68a1,1,0,0,0-1.427-.9A7.917,7.917,0,0,0,41,9a8,8,0,0,0,3,6.241V22H41a1,1,0,0,0-.99.858l-.647,4.529,1.98.283L41.867,24h4.266l.524,3.67a1,1,0,0,0,.71.818,11.939,11.939,0,0,1,2.4.987,1,1,0,0,0,1.081-.077l2.961-2.22,3.016,3.016L54.6,33.155a1,1,0,0,0-.077,1.081,11.939,11.939,0,0,1,.987,2.4,1,1,0,0,0,.818.71l3.67.524v4.266l-3.67.524a1,1,0,0,0-.818.71,11.939,11.939,0,0,1-.987,2.4,1,1,0,0,0,.077,1.081l2.22,2.961-3.016,3.016L50.845,50.6a1,1,0,0,0-1.081-.077,11.939,11.939,0,0,1-2.4.987,1,1,0,0,0-.71.818L46.133,56H42V51.771a11.1,11.1,0,0,0-.45-3.121,9.11,9.11,0,1,0-6.394-7.062c-.024-.01-.047-.022-.071-.031L27,38.323V36.786A11.089,11.089,0,0,0,30.479,34H33a3,3,0,0,0,3-3V28.816A3,3,0,0,0,38,26V23a3,3,0,0,0-2-2.816V19A14,14,0,0,0,8,19v1.184A3,3,0,0,0,6,23v3a3,3,0,0,0,3,3h2c.064,0,.126-.01.189-.014A11.023,11.023,0,0,0,17,36.786v1.537L8.915,41.557A10.949,10.949,0,0,0,2,51.771V61a1,1,0,0,0,1,1H41a1,1,0,0,0,1-1V58h5a1,1,0,0,0,.99-.858l.558-3.907a14,14,0,0,0,1.6-.657L53.3,54.942a1,1,0,0,0,1.307-.093l4.243-4.243a1,1,0,0,0,.093-1.307l-2.364-3.152a14,14,0,0,0,.657-1.6l3.907-.558A1,1,0,0,0,62,43V37A1,1,0,0,0,61.142,36.01Zm-11-8.588c-.047-.023-.1-.038-.147-.06V15H48v7.93l-.01-.072A1,1,0,0,0,47,22H46V14.74a1,1,0,0,0-.429-.821A6,6,0,0,1,45,4.522V9a1,1,0,0,0,.684.949l3,1a1,1,0,0,0,.632,0l3-1A1,1,0,0,0,53,9V4.522a6,6,0,0,1-.571,9.4A1,1,0,0,0,52,14.74V26.033ZM37,40a7.05,7.05,0,1,1,3.333,5.941,10.916,10.916,0,0,0-2.611-2.877A6.836,6.836,0,0,1,37,40Zm-4-8H31.786a10.9,10.9,0,0,0,1.025-3.014c.063,0,.125.014.189.014h1v2A1,1,0,0,1,33,32ZM31,21a3.015,3.015,0,0,1-2.4-1.2l-1.8-2.4a1,1,0,0,0-.674-.392,1.011,1.011,0,0,0-.751.211L22.019,19.9A5.018,5.018,0,0,1,18.9,21H13V20a9,9,0,0,1,18,0Zm5,5a1,1,0,0,1-1,1H33V22h2a1,1,0,0,1,1,1ZM22,7A12.013,12.013,0,0,1,34,19v1H33a11,11,0,0,0-22,0H10V19A12.013,12.013,0,0,1,22,7ZM9,27a1,1,0,0,1-1-1V23a1,1,0,0,1,1-1h2v5Zm4,0V23h5.9a7.024,7.024,0,0,0,4.372-1.534l2.551-2.041L27,21a5.025,5.025,0,0,0,4,2v4a8.947,8.947,0,0,1-1.522,5H22v2h5.644A8.991,8.991,0,0,1,13,27Zm9,11a10.966,10.966,0,0,0,3-.426V39a3,3,0,0,1-6,0V37.574A10.966,10.966,0,0,0,22,38ZM40,60H34V49H32V60H12V49H10V60H4V51.771a8.958,8.958,0,0,1,5.658-8.357l7.563-3.025a4.968,4.968,0,0,0,9.558,0l7.563,3.025A8.958,8.958,0,0,1,40,51.771Z"></path><rect x="43" y="26" width="2" height="2"></rect><rect x="43" y="52" width="2" height="2"></rect><rect x="52.192" y="48.192" width="2" height="2" transform="translate(-19.205 52.021) rotate(-45)"></rect><rect x="56" y="39" width="2" height="2"></rect><rect x="52.192" y="29.808" width="2" height="2" transform="translate(-6.205 46.636) rotate(-45)"></rect></g></svg>
       
               </div>
               <div class="py-2 px-2">
@@ -186,7 +208,6 @@
           </div>
         </div>
       </section>
-      
       <style media="screen">
         .icon-xxl {
           width: 100px;
